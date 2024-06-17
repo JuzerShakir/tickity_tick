@@ -8,14 +8,14 @@
       }
       %>
 
-    <span class="w-40 md:w-96 peer-checked/tick:line-through peer-checked/tick:text-gray-300 peer-checked/tick:italic">
+    <span data-tasks-target: "hi" class="w-40 md:w-96 peer-checked/tick:line-through peer-checked/tick:text-gray-300 peer-checked/tick:italic">
       <%= task.description %>
     </span>
   <% end %>
 
   <%# Actions %>
   <div class="flex gap-5">
-    <%= link_to edit_task_path(task), class: ("invisible" if task.completed) do %>
+    <%= link_to edit_task_path(task), id: "#{task.id}-edit", class: ("invisible" if task.completed) do %>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-cyan-500 hover:stroke-cyan-700">
         <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
       </svg>

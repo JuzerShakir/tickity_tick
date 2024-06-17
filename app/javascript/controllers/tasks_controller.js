@@ -6,6 +6,10 @@ export default class extends Controller {
 		const id = e.target.dataset.id;
 		const csrfToken = document.querySelector("[name='csrf-token']").content;
 
+		// Show edit link if task incomplete, hide it if task completed.
+		const editLink = document.getElementById(`${id}-edit`);
+		editLink.classList.toggle("invisible");
+
 		fetch(`/tasks/${id}/toggle`, {
 			method: "POST", // *GET, POST, PUT, DELETE, etc.
 			mode: "cors", // no-cors, *cors, same-origin

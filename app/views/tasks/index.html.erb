@@ -14,10 +14,12 @@
 </section>
 
 <%# Tasks %>
-<section id="tasks" class= "grid justify-items-center gap-5">
-  <h1 class="font-bold text-lg mb-">Tasks</h1>
+<% if @tasks.present? %>
+  <section id="tasks" class= "grid justify-items-center gap-5">
+    <h1 class="font-bold text-lg mb-">Tasks</h1>
 
-  <div data-controller="tasks" class="grid gap-4">
-    <%= render @tasks %>
-  </div>
-</section>
+    <div data-controller="tasks" class="grid gap-4">
+      <%= render @tasks %>
+    </div>
+  </section>
+<% end %>

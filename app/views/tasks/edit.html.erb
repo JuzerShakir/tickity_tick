@@ -3,7 +3,7 @@
 
   <turbo-frame id="<%= dom_id @task %>">
     <%= form_with(model: @task, class:"flex justify-center items-center gap-2 md:gap-5") do |form| %>
-      <%= form.text_field :description, autofocus: true, placeholder: "Add new task", class: "w-48 md:w-96  px-2 md:px-3 py-2 shadow rounded-md border border-gray-200 outline-none text-sm md:text-base" %>
+      <%= form.text_field :description, autofocus: true, class: "w-48 md:w-96  px-2 md:px-3 py-2 shadow rounded-md border border-gray-200 outline-none text-sm md:text-base" %>
 
       <%# Save %>
       <span class="flex gap-5">

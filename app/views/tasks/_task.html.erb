@@ -1,7 +1,7 @@
 <turbo-frame id="<%= dom_id task %>"  class="flex gap-12">
   <%= form_with(model: task, class:"flex text-lg") do |form| %>
     <%= form.check_box :completed,
-      class: "peer/tick mr-2 align-middle bg-gray-50 border-gray-300 focus:ring focus:ring-blue-300 h-5 w-5 rounded checked:bg-green-500 cursor-pointer",
+      class: "peer/tick mr-2 align-middle bg-gray-50 border-gray-300 focus:ring focus:ring-blue-300 h-5 w-5 rounded checked:bg-green-500 cursor-pointer checked:hover:bg-green-500 checked:focus:bg-green-500",
       data: {
         id: task.id,
         action: "tasks#toggle"
@@ -15,7 +15,7 @@
 
   <%# Actions %>
   <div class="flex gap-5">
-    <%= link_to edit_task_path(task) do %>
+    <%= link_to edit_task_path(task), class: ("invisible" if task.completed) do %>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 stroke-cyan-500 hover:stroke-cyan-700">
         <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
       </svg>

@@ -22,8 +22,6 @@ export default class extends Controller {
 			body: JSON.stringify({ completed: e.target.checked }), // body data type must match "Content-Type" header
 		})
 			.then((response) => response.json())
-			.then((data) => {
-				alert(data.message);
-			});
+			.then((data) => {});
 	}
 }

@@ -6,18 +6,18 @@
 <% end %>
 
 <%# Heading %>
-<h1 class="font-bold text-2xl">Task Manager</h1>
+<h1 class="font-bold text-2xl text-center">Task Manager</h1>
 
 <%# Form %>
-<div class="mt-4">
+<section>
   <%= render "form", task: @task %>
-</div>
+</section>
 
 <%# Tasks %>
-<div id="tasks">
-  <h1 class="font-bold text-lg mb-7">Tasks</h1>
+<section id="tasks" class= "grid justify-items-center gap-5">
+  <h1 class="font-bold text-lg mb-">Tasks</h1>
 
-  <div data-controller="tasks" class="px-5">
+  <div data-controller="tasks" class="grid gap-4">
     <%= render @tasks %>
   </div>
-</div>
+</section>

@@ -1,6 +1,6 @@
 <%# Flash messages %>
 <% if notice.present? %>
-  <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
+  <p class="py-2 px-3 bg-green-50 text-green-500 font-medium rounded-lg inline-block text-sm md:text-base" id="notice">
     <%= notice %>
   </p>
 <% end %>
@@ -15,10 +15,10 @@
 
 <%# Tasks %>
 <% if @tasks.present? %>
-  <section id="tasks" class= "grid justify-items-center gap-5">
-    <h1 class="font-bold text-lg mb-">Tasks</h1>
+  <section id="tasks" class= "grid justify-items-center gap-5 w-screen mb-10">
+    <h1 class="font-bold text-lg">Tasks</h1>
 
-    <div data-controller="tasks" class="grid gap-4">
+    <div data-controller="tasks" class="grid gap-4 w-3/4">
       <%= render @tasks %>
     </div>
   </section>

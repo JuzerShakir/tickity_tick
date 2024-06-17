@@ -1,5 +1,5 @@
-<turbo-frame id="<%= dom_id task %>"  class="flex gap-12">
-  <%= form_with(model: task, class:"flex text-lg") do |form| %>
+<turbo-frame id="<%= dom_id task %>"  class="flex justify-center gap-5">
+  <%= form_with(model: task, class:"flex text-sm md:text-lg") do |form| %>
     <%= form.check_box :completed,
       class: "peer/tick mr-2 align-middle bg-gray-50 border-gray-300 focus:ring focus:ring-blue-300 h-5 w-5 rounded checked:bg-green-500 cursor-pointer checked:hover:bg-green-500 checked:focus:bg-green-500",
       data: {
@@ -8,7 +8,7 @@
       }
       %>
 
-    <span class="w-60 peer-checked/tick:line-through peer-checked/tick:text-gray-300 peer-checked/tick:italic">
+    <span class="w-40 md:w-96 peer-checked/tick:line-through peer-checked/tick:text-gray-300 peer-checked/tick:italic">
       <%= task.description %>
     </span>
   <% end %>

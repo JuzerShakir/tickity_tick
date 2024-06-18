@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root "tasks#index"
 
-  devise_for :users
+  devise_for :users, controllers: { confirmations: 'users/confirmations' }
 
   post "tasks/:id/toggle", to: "tasks#toggle"
   resources :tasks, except: [:new, :show]

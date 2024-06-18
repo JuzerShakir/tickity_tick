@@ -66,3 +66,5 @@ end
 gem "tailwindcss-rails", "~> 2.6"
 
 gem "jsbundling-rails", "~> 1.3"
+
+gem "devise", "~> 4.9"

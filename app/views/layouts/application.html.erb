@@ -11,9 +11,15 @@
 
     <%# Favicon Ico %>
     <%= favicon_link_tag asset_path("favicon.ico") %>
+
+    <%# Fonts %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <%# Titillium & Nunito Sans Fonts (All Weights) from https://fonts.google.com/ %>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="font-sans">
     <main class="grid justify-center gap-8 md:gap-14 mt-16 md:mt-28">
       <%= yield %>
     </main>

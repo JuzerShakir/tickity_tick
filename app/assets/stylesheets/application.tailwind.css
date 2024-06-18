@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.titillium {
+		font-family: "Titillium Web", sans-serif;
+	}
+}
+
 @layer components {
 	.btn {
 		@apply rounded-lg py-2 px-5 inline-block font-medium cursor-pointer;

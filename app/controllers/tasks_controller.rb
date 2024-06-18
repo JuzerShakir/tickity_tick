@@ -9,7 +9,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to root_path, notice: 'Task created successfully' }
+        format.html { redirect_to tasks_path, notice: 'Task created successfully' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -30,7 +30,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to root_path, notice: 'Task updated successfully' }
+        format.html { redirect_to tasks_path, notice: 'Task updated successfully' }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end
@@ -40,7 +40,7 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to root_path, notice: 'Task deleted successfully'
+    redirect_to tasks_path, notice: 'Task deleted successfully'
   end
 
   private

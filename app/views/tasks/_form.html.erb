@@ -1,5 +1,16 @@
-<%= form_with(model: task, class:"flex justify-center items-center gap-2 sm:gap-4 md:gap-5") do |form| %>
-  <%= form.text_field :description, autofocus: true, placeholder: "Buy Groceries 🛒...", class: "form-input border-primary-700" %>
-  <%= form.submit "Add", class: "form-submit w-auto" %>
-<% end %>
+<div data-controller="character-counter" class="grid gap-2 md:gap-1">
+  <%= form_with( model: task, class:"flex justify-center items-center gap-2 sm:gap-4 md:gap-5") do |form| %>
+    <%= form.text_field :description,
+      autofocus: true,
+      placeholder: "Buy Groceries 🛒...",
+      class: "form-input border-primary-700",
+      data: { character_counter_target: "input"},
+      maxlength: "100"
+      %>
+    <%= form.submit "Add", class: "form-submit w-auto" %>
+  <% end %>
 
+  <p class="text-xs font-thin text-primary-800 dark:text-primary-100 italic">
+    <strong data-character-counter-target="counter">0</strong>&nbsp;/&nbsp;100
+  </p>
+</div>

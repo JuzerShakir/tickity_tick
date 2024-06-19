@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @tasks = current_user.tasks.order(:completed)
     @task = current_user.tasks.new

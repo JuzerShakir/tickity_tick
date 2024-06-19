@@ -2,24 +2,29 @@
   <h1 class="font-bold text-2xl mb-3">Editing Task</h1>
 
   <turbo-frame id="<%= dom_id @task %>">
-    <%= form_with(model: @task, class:"flex justify-center items-center gap-2 md:gap-5") do |form| %>
-      <%= form.text_field :description, autofocus: true, class: "w-48 md:w-96 form-input" %>
+    <div class="grid w-full">
+      <%# Validation Error Messages %>
+      <%= render "devise/shared/error_messages", resource: @task %>
 
-      <%# Save %>
-      <span class="flex gap-5">
-        <%= button_tag type: "submit" do %>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" class="stroke-primary-500 hover:stroke-primary-700 size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-          </svg>
-        <% end %>
+      <%= form_with(model: @task, class:"flex justify-between items-center gap-5") do |form| %>
+        <%= form.text_field :description, autofocus: true, class: "form-input" %>
 
-        <%# Close button %>
-        <%= link_to "" do  %>
-          <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="stroke-secondary-500 hover:stroke-secondary-700 dark:stroke-secondary-200  dark:hover:stroke-secondary-400 size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-          </svg>
-        <% end %>
-      </span>
+        <%# Save %>
+        <span class="flex gap-5">
+          <%= button_tag type: "submit" do %>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="stroke-primary-500 hover:stroke-primary-700 size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+            </svg>
+          <% end %>
+
+          <%# Close button %>
+          <%= link_to "" do  %>
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="stroke-secondary-500 hover:stroke-secondary-700 dark:stroke-secondary-200  dark:hover:stroke-secondary-400 size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          <% end %>
+        </span>
+      </div>
     <% end %>
   </turbo-frame>
 </div>

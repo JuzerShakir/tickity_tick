@@ -13,7 +13,8 @@ class TasksController < ApplicationController
       if @task.save
         format.html { redirect_to tasks_path, notice: 'Task created successfully' }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        @tasks = current_user.tasks.order(:completed)
+        format.html { render :index, status: :unprocessable_entity }
       end
     end
   end

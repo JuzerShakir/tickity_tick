@@ -1,4 +1,4 @@
-<turbo-frame id="<%= dom_id task %>"  class="flex justify-center gap-5">
+<turbo-frame id="<%= dom_id task %>"  class="flex justify-between gap-5">
   <%= form_with(model: task, class:"flex items-center text-sm md:text-lg") do |form| %>
     <%= form.check_box :completed,
       class: "peer/tick mr-2 form-checkbox",

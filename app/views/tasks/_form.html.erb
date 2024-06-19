@@ -1,5 +1,5 @@
-<%= form_with(model: task, class:"flex justify-center items-center gap-2 md:gap-5") do |form| %>
-  <%= form.text_field :description, autofocus: true, placeholder: "Buy Groceries 🛒...", class: "w-56 md:w-96 form-input border-primary-700" %>
+<%= form_with(model: task, class:"flex justify-center items-center gap-2 sm:gap-4 md:gap-5") do |form| %>
+  <%= form.text_field :description, autofocus: true, placeholder: "Buy Groceries 🛒...", class: "form-input border-primary-700" %>
   <%= form.submit "Add", class: "form-submit w-auto" %>
 <% end %>
 

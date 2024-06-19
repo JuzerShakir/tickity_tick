@@ -15,10 +15,11 @@
 
   <%# Tasks %>
   <% if @tasks.present? %>
-    <section id="tasks" class= "grid justify-items-center gap-5 mb-10">
+    <section class= "grid justify-items-center gap-5 mb-10">
       <h2 class="font-bold text-lg text-primary-950 dark:text-primary-50">Tasks</h2>
 
-      <div data-controller="tasks" class="grid gap-4">
+      <%= turbo_stream_from current_user %>
+      <div id="task" data-controller="tasks" class="grid gap-4">
         <%= render @tasks %>
       </div>
     </section>

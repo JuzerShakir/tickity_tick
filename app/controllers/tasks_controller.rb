@@ -1,11 +1,11 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all.order(:completed)
-    @task = Task.new
+    @tasks = current_user.tasks.order(:completed)
+    @task = current_user.tasks.new
   end
 
   def create
-    @task = Task.new(task_params)
+    @task = current_user.tasks.new(task_params)
 
     respond_to do |format|
       if @task.save

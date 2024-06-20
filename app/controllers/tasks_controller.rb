@@ -33,7 +33,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to root_path, notice: 'Task updated successfully' }
+        format.html { redirect_to root_path }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end

@@ -220,6 +220,13 @@
   resolved "https://registry.yarnpkg.com/@stimulus-components/character-counter/-/character-counter-5.0.0.tgz#9a1e9e88d2893212270bda7e254a5b80d0081b0f"
   integrity sha512-oMXJ6B6qtV6FRmLa6riMNn/7Nym1m0RxN9q4Vv3KrVOlfXBZlHxAwGpCfC4+sIEKwTl08bWj1iDry97kdzF9nA==
 
+"@stimulus-components/dropdown@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@stimulus-components/dropdown/-/dropdown-3.0.0.tgz#b85efa8ef06a94eac1a40e52ac920f5089789c8e"
+  integrity sha512-GY9Ez8T5Vbcad702seF4iuKZwv4f+VACtfO527l8vrFDFbGWWFyRljyK9FFXSPEkUC3/4PilVsYfPO2CMikkEg==
+  dependencies:
+    stimulus-use "^0.52.2"
+
 "@stimulus-components/notification@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@stimulus-components/notification/-/notification-3.0.0.tgz#f67ec72bb0601ec33f597494def72e6ca93dd4a5"

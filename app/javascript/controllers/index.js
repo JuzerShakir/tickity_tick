@@ -18,3 +18,6 @@ application.register("tasks", TasksController);
 
 import CharacterCounter from "@stimulus-components/character-counter";
 application.register("character-counter", CharacterCounter);
+
+import Dropdown from "@stimulus-components/dropdown";
+application.register("dropdown", Dropdown);

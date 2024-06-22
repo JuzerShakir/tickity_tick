@@ -44,6 +44,6 @@
 	}
 
 	.link {
-		@apply font-medium text-primary-600 hover:underline dark:text-primary-500;
+		@apply font-medium text-primary-600 hover:underline hover:underline-offset-4 dark:text-primary-500;
 	}
 }

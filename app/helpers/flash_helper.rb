@@ -2,9 +2,9 @@ module FlashHelper
   def css_class_for_flash(type)
     case type
     when "notice"
-      "bg-green-50 text-green-500"
+      "bg-green-50 text-green-500 dark:bg-gray-900 dark:text-lime-600 dark:backdrop-blur-xl"
     when "alert"
-      "bg-amber-50 text-amber-500"
+      "bg-amber-50 text-amber-500 dark:bg-gray-900"
     end
   end
 

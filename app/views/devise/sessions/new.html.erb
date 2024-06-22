@@ -40,7 +40,7 @@
 
           <%# Submit %>
           <div class="actions">
-            <%= f.submit "Log in", class: "form-submit" %>
+            <%= f.submit "Log in", data: {turbo_submits_with: "Logging in..."}, class: "form-submit" %>
           </div>
         </div>
       <%  end  %>

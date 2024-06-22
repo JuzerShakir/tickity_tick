@@ -7,7 +7,7 @@
       data: { character_counter_target: "input"},
       maxlength: "100"
       %>
-    <%= form.submit "Add", class: "form-submit w-auto" %>
+    <%= form.submit "Add", data: {turbo_submits_with: "Adding..."}, class: "form-submit w-auto" %>
   <% end %>
 
   <p class="text-xs font-thin text-primary-800 dark:text-primary-100 italic">

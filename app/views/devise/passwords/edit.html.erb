@@ -33,7 +33,7 @@
 
     <%# Submit  %>
     <div class="actions">
-      <%= f.submit "Change my password", class: "form-submit" %>
+      <%= f.submit "Change my password", data: {turbo_submits_with: "Changing..."}, class: "form-submit" %>
     </div>
   <% end %>
   </div>

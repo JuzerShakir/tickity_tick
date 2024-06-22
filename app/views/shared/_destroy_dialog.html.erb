@@ -25,7 +25,7 @@
       <%= button_to "Yes, I'm sure!",
         destroy_path,
         method: :delete,
-        data: {"turbo_frame": "_top"},
+        data: {"turbo_frame": "_top", "turbo_submits_with": "Deleting..."},
         class: "py-2 px-3 text-sm font-medium text-center text-white bg-red-500 dark:bg-red-600 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300"
       %>
     </div>

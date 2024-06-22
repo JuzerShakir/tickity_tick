@@ -52,7 +52,7 @@
 
             <%# Submit %>
             <div class="actions">
-              <%= f.submit "Create an account", class: "form-submit" %>
+              <%= f.submit "Create an account", data: { turbo_submits_with: "Creating..."}, class: "form-submit" %>
             </div>
           </div>
         <% end %>

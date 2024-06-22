@@ -28,7 +28,7 @@
 
         <%# Submit %>
         <div class="actions">
-          <%= f.submit "Resend confirmation instructions", class: "form-submit" %>
+          <%= f.submit "Resend confirmation instructions", data: {turbo_submits_with: "Sending..."}, class: "form-submit" %>
         </div>
       </div>
     <% end %>

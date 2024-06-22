@@ -25,7 +25,7 @@
 
         <%# Submit %>
         <div class="actions">
-          <%= f.submit "Send me reset password instructions", class: "form-submit" %>
+          <%= f.submit "Send me reset password instructions", data: {turbo_submits_with: "Sending..."}, class: "form-submit" %>
         </div>
       </div>
     <% end %>

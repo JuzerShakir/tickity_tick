@@ -24,7 +24,7 @@
 
           <%# Submit %>
           <div class="actions">
-            <%= f.submit "Resend unlock instructions", class: "form-submit" %>
+            <%= f.submit "Resend unlock instructions", data: {turbo_submits_with: "Sending..."}, class: "form-submit" %>
           </div>
         </div>
       <%  end %>

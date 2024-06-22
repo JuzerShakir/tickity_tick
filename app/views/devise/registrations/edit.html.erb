@@ -46,7 +46,7 @@
 
           <%# Submit %>
           <div class="actions">
-            <%= f.submit "Update", class: "form-submit" %>
+            <%= f.submit "Update", data: {turbo_submits_with: "Updating..."}, class: "form-submit" %>
           </div>
         </div>
       <% end %>

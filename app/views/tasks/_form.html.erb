@@ -1,7 +1,6 @@
 <div data-controller="character-counter" class="grid gap-2 md:gap-1">
   <%= form_with( model: task, class:"flex justify-center items-center gap-2 sm:gap-4 md:gap-5") do |form| %>
     <%= form.text_field :description,
-      autofocus: true,
       placeholder: "Buy Groceries 🛒...",
       class: "form-input border-primary-700",
       data: { character_counter_target: "input"},

@@ -52,6 +52,7 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
+  gem "dockerfile-rails", ">= 1.6"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"

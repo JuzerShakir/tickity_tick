@@ -1,18 +1,19 @@
 {
-	"name": "app",
-	"private": true,
-	"dependencies": {
-		"@hotwired/stimulus": "^3.2.2",
-		"@hotwired/turbo-rails": "^8.0.4",
-		"@stimulus-components/character-counter": "^5.0.0",
-		"@stimulus-components/dropdown": "^3.0.0",
-		"@stimulus-components/notification": "^3.0.0",
-		"autoprefixer": "^10.4.19",
-		"esbuild": "^0.21.5",
-		"tailwindcss": "^3.4.4"
-	},
-	"scripts": {
-		"build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
-		"build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
-	}
+  "name": "app",
+  "private": true,
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.4",
+    "@stimulus-components/character-counter": "^5.0.0",
+    "@stimulus-components/dropdown": "^3.0.0",
+    "@stimulus-components/notification": "^3.0.0",
+    "autoprefixer": "^10.4.19",
+    "esbuild": "^0.21.5",
+    "tailwindcss": "^3.4.4"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets",
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
+  },
+  "packageManager": "yarn@1.22.19"
 }

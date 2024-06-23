@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def redirect_if_logged_in
     if user_signed_in?
-      redirect_to root_path, alert: "You need to sign out before continuing."
+      redirect_to tasks_path, alert: "You need to sign out before continuing."
     end
   end
 end

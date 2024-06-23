@@ -12,8 +12,8 @@
 
   <%# Tasks %>
   <% if @tasks.present? %>
-    <section class= "grid justify-items-center gap-5">
-      <h2 class="font-semibold text-xl md:text-2xl text-primary-950 dark:text-primary-100">🚀&nbsp;&nbsp; Let's get it done! &nbsp;&nbsp;💪</h2>
+    <section class= "w-full sm:max-w-md lg:max-w-lg grid justify-items-stretch gap-5">
+      <h2 class="font-semibold text-xl md:text-2xl text-center text-primary-950 dark:text-primary-100">🚀&nbsp;&nbsp; Let's get it done! &nbsp;&nbsp;💪</h2>
 
       <%= turbo_stream_from current_user %>
       <div id="task" data-controller="tasks" class="grid gap-4">

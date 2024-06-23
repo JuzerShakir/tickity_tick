@@ -39,3 +39,6 @@
 
 /node_modules
 .stimulus-lsp
+# Ignore default Litestack SQLite databases.
+/db/**/*.sqlite3
+/db/**/*.sqlite3-*

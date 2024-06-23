@@ -68,3 +68,5 @@ gem "tailwindcss-rails", "~> 2.6"
 gem "jsbundling-rails", "~> 1.3"
 
 gem "devise", "~> 4.9"
+
+gem "litestack", "~> 0.4.4"

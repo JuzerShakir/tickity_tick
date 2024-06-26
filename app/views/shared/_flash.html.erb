@@ -14,20 +14,16 @@
         <div class="flex-1 grid gap-2 grid-flow-col place-content-center">
             <%# flash svg icon %>
             <div class="flex items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="h-5 w-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d= "<%= icon_for_flash(type) %>" />
-                </svg>
+                <%= icon_for_flash(type) %>
             </div>
 
             <%# flash message %>
             <p class="font-medium"><%= message %></p>
         </div>
 
-        <%# clsoe svg button %>
+        <%# close svg button %>
         <button class="ml-2" data-action="flash#hide">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="h-5 w-5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
+            <%= render "shared/svg/x_mark", classes: "size-5" %>
         </button>
     </div>
 <% end %>

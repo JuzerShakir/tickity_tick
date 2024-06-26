@@ -12,16 +12,12 @@
         <%# Save %>
         <span class="flex gap-5">
           <%= button_tag type: "submit" do %>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="stroke-primary-500 hover:stroke-primary-700 size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-            </svg>
+            <%= render "shared/svg/check_mark", classes: "size-5 md:size-6 lg:size-7 stroke-primary-500 hover:stroke-primary-700" %>
           <% end %>
 
           <%# Close button %>
           <%= link_to "" do  %>
-            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="stroke-secondary-500 hover:stroke-secondary-700 dark:stroke-secondary-200  dark:hover:stroke-secondary-400 size-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
+            <%= render "shared/svg/x_mark", classes: "size-5 md:size-6 lg:size-7 stroke-secondary-500 hover:stroke-secondary-700 dark:stroke-secondary-200  dark:hover:stroke-secondary-400"  %>
           <% end %>
         </span>
       </div>

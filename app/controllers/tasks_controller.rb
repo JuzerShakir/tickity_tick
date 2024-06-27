@@ -33,7 +33,16 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to tasks_path }
+        message = "Task updated successfully"
+        flash.now[:notice] = message
+
+        format.html { redirect_to tasks_path, notice: message }
+        format.turbo_stream do
+          render turbo_stream: [
+            turbo_stream.replace(@task) ,
+            turbo_stream.update(:flash_msg, partial: "shared/flash" )
+        ]
+        end
       else
         format.html { render :edit, status: :unprocessable_entity }
       end
@@ -43,10 +52,17 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
+    message = "Task deleted successfully"
+    flash.now[:notice] = message
 
     respond_to do |format|
-      format.html { redirect_to tasks_path, notice: 'Task deleted successfully' }
-      format.turbo_stream { render turbo_stream: turbo_stream.remove(@task) }
+      format.html { redirect_to tasks_path, notice: message }
+      format.turbo_stream do
+        render turbo_stream: [
+          turbo_stream.remove(@task),
+          turbo_stream.update(:flash_msg, partial: "shared/flash" )
+      ]
+      end
     end
   end
 

@@ -33,7 +33,16 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to tasks_path }
+        message = "Task updated successfully"
+        flash.now[:notice] = message
+
+        format.html { redirect_to tasks_path, notice: message }
+        format.turbo_stream do
+          render turbo_stream: [
+            turbo_stream.replace(@task) ,
+            turbo_stream.update(:flash_msg, partial: "shared/flash" )
+        ]
+        end
       else
         format.html { render :edit, status: :unprocessable_entity }
       end

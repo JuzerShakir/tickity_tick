@@ -113,6 +113,7 @@ Thank you, contributors!
 
 - How to `POST` a JSON fetch request through the stimulus controller.
 - How to use the `turbo-frame` & `turbo-stream` to update UI for the tasks and show flash messages w/o reloading full page.
+- Create SQLite database in production.
 - How to create themes in the TailwindCSS.
 - Use devise to authenticate, confirm, recover and register users.
 

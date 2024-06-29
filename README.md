@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/Ruby_3.3.1-CC342D?style=for-the-badge&logo=ruby&logoColor=white">
 
   <!-- RAILS -->
-  <img src="https://img.shields.io/badge/Rails_7.1.3.4-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white">
+  <img src="https://img.shields.io/badge/Rails_7.1.3.**4**-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white">
 
   <!-- SQLite -->
   <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white">
@@ -22,7 +22,7 @@
 
 </div>
 
-## Motivation
+## 🧐 Motivation
 
 Do you ever get an important task idea while you're busy working, but reaching for your phone to add it feels disruptive?
 
@@ -35,11 +35,11 @@ TickityTick is a web app designed to help you stay focused and capture those fle
 - ⭐ Perfect for capturing quick reminders or task ideas that pop into your head.
 - ⭐ Responsive design ensures a smooth experience on both desktop and mobile devices.
 
-## Production
+## 🐦‍🔥 Production
 
 This application is hosted in the production. You can check it out here: [TickityTick](https://tickity-tick.fly.dev/tasks)
 
-## Development Setup
+## 👩‍💻 Development Setup
 
 Open your terminal and clone this repo into a directory of your choice:
 
@@ -93,7 +93,7 @@ This will output couple of URLs where it will listen for emails. You can visit a
   <a href="https://www.buymeacoffee.com/juzershakir"> <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="juzershakir" /></a>
 </div>
 
-## Contributing
+## 💡 Contributing
 
 If you have problems, please create a [GitHub Issue](https://github.com/JuzerShakir/tickity_tick/issues).
 
@@ -102,6 +102,19 @@ instructions on setting up the repo on your machine, understanding the codebase,
 and creating a good pull request.
 
 Thank you, contributors!
+
+## 💪 Challenges I faced
+
+- Update UI (strike-through text, blur text color, hide edit icon) seamlessly when the user clicks on the checkmark ✅ of a task.
+- Show flash messages when updating & deleting the tasks.
+- Mailing in the development & production environments.
+
+## 🏆 Takeaways
+
+- How to `POST` a JSON fetch request through the stimulus controller.
+- How to use the `turbo-frame` & `turbo-stream` to update UI for the tasks and show flash messages w/o reloading full page.
+- How to create themes in the TailwindCSS.
+- Use devise to authenticate, confirm, recover and register users.
 
 ## Versioning
 

@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_task, only: %i[toggle edit update destroy]
 
   def index
     @tasks = current_user.tasks.order(:completed)
@@ -20,17 +21,13 @@ class TasksController < ApplicationController
   end
 
   def toggle
-    @task = Task.find(params[:id])
     @task.update(completed: params[:completed])
   end
 
   def edit
-    @task = Task.find(params[:id])
   end
 
   def update
-    @task = Task.find(params[:id])
-
     respond_to do |format|
       if @task.update(task_params)
         message = "Task updated successfully"
@@ -50,7 +47,6 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task = Task.find(params[:id])
     @task.destroy
     message = "Task deleted successfully"
     flash.now[:notice] = message
@@ -70,5 +66,9 @@ class TasksController < ApplicationController
 
   def task_params
     params.require(:task).permit(:description)
+  end
+
+  def set_task
+    @task = Task.find(params[:id])
   end
 end

@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/Ruby_3.3.1-CC342D?style=for-the-badge&logo=ruby&logoColor=white">
 
   <!-- RAILS -->
-  <img src="https://img.shields.io/badge/Rails_7.1.3.**4**-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white">
+  <img src="https://img.shields.io/badge/Rails_7.1.3.4-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white">
 
   <!-- SQLite -->
   <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white">

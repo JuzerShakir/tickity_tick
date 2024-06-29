@@ -18,12 +18,12 @@
                 </div>
 
                 <%# flash message %>
-                <p class="font-medium"><%= message %></p>
+                <p class="text-lg md:text-xl font-semibold"><%= message %></p>
             </div>
 
             <%# close svg button %>
             <button class="ml-2" data-action="flash#hide">
-                <%= render "shared/svg/x_mark", classes: "size-5" %>
+                <%= render "shared/svg/x_mark", classes: "size-5 md:size-6" %>
             </button>
         </div>
     <% end %>

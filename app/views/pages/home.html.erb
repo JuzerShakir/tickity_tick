@@ -29,7 +29,63 @@
   </div>
 
   <%# CTA %>
-  <%= render "cta" %>
+  <%= render "cta", message: "start capturing task today" %>
+
+    <%# divider %>
+  <hr class="divider">
+
+  <%# Why %>
+  <div class="space-y-8 md:space-y-14 lg:space-y-16">
+    <h2 class="text-balance text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-950 dark:text-primary-300">Why TickityTick? 🤔</h2>
+    <div class="space-y-7 md:space-y-10 lg:space-y-14">
+      <p class="text-pretty text-lg md:text-xl lg:text-2xl text-secondary-950 dark:text-secondary-100 leading-10 tracking-wide md:tracking-wider lg:max-w-2xl">
+        Ever have a task idea or find a bug while working, but struggle to jot it down without breaking your flow?
+      </p>
+      <p class="text-pretty text-lg md:text-xl lg:text-2xl text-secondary-950 dark:text-secondary-100 leading-10 tracking-wide md:tracking-wider lg:max-w-2xl">
+        TickityTick is a web app designed to help you stay focused and capture those fleeting ideas with minimal effort.
+      </p>
+      <p class="text-pretty text-lg md:text-xl lg:text-2xl text-secondary-950 dark:text-secondary-100 leading-10 tracking-wide md:tracking-wider lg:max-w-2xl">
+        Enhances productivity for developers, designers, and content creators by providing a streamlined interface to log tasks, bugs, and inspirations quickly.
+      </p>
+    </div>
+  </div>
+
+  <%# divider %>
+  <hr class="divider">
+
+  <%# Benefits %>
+  <div class="grid gap-8 md:gap-10 lg:gap-14 xl:gap-20 max-w-screen-xl">
+      <h2 class="text-balance text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-950 dark:text-primary-300">Benefits of using TickityTick</h2>
+      <div class="space-y-8 md:space-y-14 lg:space-y-16 xl:space-y-0 xl:grid xl:grid-cols-3 xl:gap-10">
+          <div class="xl:space-y-7 lg:space-y-5 space-y-3">
+              <%= render "shared/svg/tick" %>
+              <h3 class="md:text-start xl:text-center text-xl md:text-2xl lg:text-3xl font-semibold tracking-wider text-primary-950 dark:text-primary-600">Streamlined Interface</h3>
+              <p class="text-pretty md:text-start xl:text-center text-lg md:text-xl text-secondary-950 dark:text-secondary-100 leading-7 tracking-wide">
+                Simple and easy-to-use interface minimizes disruption to your workflow.
+              </p>
+          </div>
+          <div class="xl:space-y-7 lg:space-y-5 space-y-3">
+              <%= render "shared/svg/bolt" %>
+              <h3 class="md:text-start xl:text-center text-xl md:text-2xl lg:text-3xl font-semibold tracking-wider text-primary-950 dark:text-primary-600">Rapid Capture</h3>
+              <p class="text-pretty md:text-start xl:text-center text-lg md:text-xl text-secondary-950 dark:text-secondary-100 leading-7 tracking-wide">
+                Perfect for capturing quick reminders or task ideas that pop into your head.
+              </p>
+          </div>
+          <div class="xl:space-y-7 lg:space-y-5 space-y-3">
+              <%= render "shared/svg/device_phone" %>
+              <h3 class="md:text-start xl:text-center text-xl md:text-2xl lg:text-3xl font-semibold tracking-wider text-primary-950 dark:text-primary-600">Responsive Design</h3>
+              <p class="text-pretty md:text-start xl:text-center text-lg md:text-xl text-secondary-950 dark:text-secondary-100 leading-7 tracking-wide">
+                Ensures a smooth experience on both desktop, laptop, tablet & mobile devices.
+              </p>
+          </div>
+      </div>
+  </div>
+
+  <%# CTA %>
+  <%= render "cta", message: "enhance my productivity"%>
+
+  <%# divider %>
+  <hr class="divider">
 
   <%# User count %>
   <h2 class="text-3xl italic md:text-4xl font-bold leading-relaxed tracking-wide text-primary-700/90 dark:text-primary-300/90">
@@ -82,5 +138,5 @@
   </div>
 
   <%# CTA %>
-  <%= render "cta" %>
+  <%= render "cta", message: "maintain my focus" %>
 </section>

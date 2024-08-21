@@ -1,5 +1,5 @@
-<div data-controller="character-counter" class="grid gap-2 md:gap-1">
-  <%= form_with( model: task, class:"flex justify-center items-center gap-2 sm:gap-4 md:gap-5") do |form| %>
+<div data-controller="character-counter" class="space-y-2 md:space-y-3">
+  <%= form_with( model: task, class:"flex justify-center gap-2 sm:gap-4 md:gap-5") do |form| %>
     <%= form.text_field :description,
       placeholder: "Buy Groceries 🛒...",
       class: "form-input border-primary-700",

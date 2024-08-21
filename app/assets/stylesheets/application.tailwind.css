@@ -18,9 +18,11 @@
 	.field_with_errors {
 		@apply !w-full;
 	}
+
 	.form-wrapper {
 		@apply w-full flex flex-col gap-6 sm:gap-8 lg:gap-10 items-center justify-center mx-auto h-screen lg:py-0;
 	}
+
 	.form-layout {
 		@apply w-full bg-primary-100 p-6 sm:p-8 rounded-lg shadow border border-primary-300 dark:border-secondary-700 md:mt-0 sm:max-w-md lg:max-w-lg dark:bg-gray-800 space-y-6 md:space-y-8;
 	}

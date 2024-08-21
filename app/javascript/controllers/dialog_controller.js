@@ -5,13 +5,18 @@ export default class extends Controller {
 	static targets = ["deleteModal"];
 
 	open() {
-		// console.log("Hi");
 		this.deleteModalTarget.showModal();
-		// To disable scrolling while the modal is open
-		// document.body.classList.add("overflow-hidden");
+		// disable scrolling when the modal is open
+		this.toggleScrolling();
 	}
 
 	close() {
 		this.deleteModalTarget.close();
+		this.toggleScrolling();
+	}
+
+	toggleScrolling() {
+		// enable or disable scrolling
+		document.body.classList.toggle("overflow-hidden");
 	}
 }

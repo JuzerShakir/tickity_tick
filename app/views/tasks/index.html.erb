@@ -1,24 +1,22 @@
 <%# Form %>
-<main class="grid justify-items-center gap-8 md:gap-14 mt-8 md:mt-12 lg:mt-16 mb-16 md:mb-10 p-5">
-  <section class="grid w-full sm:w-3/4 md:max-w-md">
-    <%# Validation Error Messages %>
-    <%= render "devise/shared/error_messages", resource: @task %>
-    <%# New Task form %>
-    <%= render "form", task: @task %>
+<section class="grid w-full sm:w-3/4 md:max-w-md mt-8 md:mt-12 lg:mt-16 mb-16 md:mb-10">
+  <%# Validation Error Messages %>
+  <%= render "devise/shared/error_messages", resource: @task %>
+  <%# New Task form %>
+  <%= render "form", task: @task %>
+</section>
+
+<%# divider %>
+<hr class="divider">
+
+<%# Tasks %>
+<% if @tasks.present? %>
+  <section class= "w-full sm:max-w-md lg:max-w-lg grid justify-items-stretch gap-5">
+    <h2 class="font-semibold text-xl md:text-2xl text-center text-primary-950 dark:text-primary-100">🚀&nbsp;&nbsp; Let's get it done! &nbsp;&nbsp;💪</h2>
+
+    <%= turbo_stream_from current_user %>
+    <div id="task" data-controller="tasks" class="grid gap-4">
+      <%= render @tasks %>
+    </div>
   </section>
-
-  <%# divider %>
-  <hr class="divider">
-
-  <%# Tasks %>
-  <% if @tasks.present? %>
-    <section class= "w-full sm:max-w-md lg:max-w-lg grid justify-items-stretch gap-5">
-      <h2 class="font-semibold text-xl md:text-2xl text-center text-primary-950 dark:text-primary-100">🚀&nbsp;&nbsp; Let's get it done! &nbsp;&nbsp;💪</h2>
-
-      <%= turbo_stream_from current_user %>
-      <div id="task" data-controller="tasks" class="grid gap-4">
-        <%= render @tasks %>
-      </div>
-    </section>
-  <% end %>
-</main>
+<% end %>

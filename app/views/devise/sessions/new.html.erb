@@ -1,14 +1,13 @@
-<section class="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0">
+<section class="form-wrapper">
 
   <%# Product Logo & Name %>
   <%= render "shared/logo" %>
 
   <%# Form %>
   <div class="form-layout">
-    <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
 
       <%# Heading %>
-      <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">Sign in to your account</h1>
+      <h1 class="form-header">Sign in to your account</h1>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="space-y-4 md:space-y-6">
@@ -47,10 +46,9 @@
 
       <hr class="divider">
 
-        <%# Other resources %>
-        <%= render "devise/shared/links" %>
+      <%# Other resources %>
+      <%= render "devise/shared/links" %>
 
       </div>
-    </div>
   </div>
 </section>

@@ -73,3 +73,5 @@ gem "devise", "~> 4.9"
 gem "litestack", "~> 0.4.4"
 
 gem "annotate", "~> 3.2"
+
+gem "name_of_person", "~> 1.1"

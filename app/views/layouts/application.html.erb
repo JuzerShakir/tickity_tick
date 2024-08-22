@@ -7,8 +7,19 @@
     <meta name="turbo-refresh-method" content="morph">
     <%# Preserves scroll position %>
     <meta name="turbo-refresh-scroll" content="preserve">
-    <%# Custom Browser Tab color %>
-    <meta name="theme-color" content="#fdf4ff" />
+
+    <!-- Open Graph Tags - Displays rich preview of this site when link is shared -->
+    <meta property="og:title" content="TickityTick" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="A distraction-free task manager designed to help you capture fleeting ideas without breaking your focus." />
+    <meta property="og:url" content="<%= root_url %>" />
+    <meta property="og:image" content="<%= image_url("og-image.png") %>" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TickityTick" />
+    <meta name="twitter:description" content="A distraction-free task manager designed to help you capture fleeting ideas without breaking your focus." />
+    <meta name="twitter:url" content="<%= root_url %>" />
+    <meta name="twitter:image" content="<%= image_url("og-image.png") %>" />
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
